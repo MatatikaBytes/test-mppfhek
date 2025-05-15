@@ -6,6 +6,6 @@ script: |
   echo "$ENDPOINT_URL"
   echo "$AUTH_TOKEN"
 
-  curl -v --fail-with-body -X POST --data-raw '{"alias": "test-dataset-123", "title": "t", "description": "d"}' -H "Authorization: Bearer $AUTH_TOKEN" "$ENDPOINT_URL/workspaces/fd9adc3c-34e0-447b-a3a4-7386138b5a49/datasets"
+  curl -v --fail-with-body -X POST --data-raw '{"alias": "test-dataset-123", "title": "t", "description": "d"}' -H "Authorization: Bearer $AUTH_TOKEN" -H 'Content-Type:' "$ENDPOINT_URL/workspaces/fd9adc3c-34e0-447b-a3a4-7386138b5a49/datasets"
 data_components:
 - dbt
